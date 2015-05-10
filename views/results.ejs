@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<meta name="viewport" content="width=device-width" initial-scale="1.0" />
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/custom.css">
+		<script type="text/javascript" src="js/custom.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-1 sidebar">
+					<a class="a-nav" href="/"><div class="logo"><img src="images/hivebridge_logo_white.png" width="60"></div></a>
+					<a class="a-nav" href="/upload"><div class="dashboard-icon"><span class="fa fa-cloud-upload"></span></div></a>
+					<a class="a-nav" href="/"><div class="dashboard-icon active"><span class="glyphicon glyphicon-dashboard"></span></div></a>
+					<div class="dashboard-icon"><span class="fa fa-bar-chart"></span></div>
+				</div>
+				<div class="col-md-11 col-md-offset-1 content">
+					<div class="content-nav"></div>
+					<div class="content-body row">
+						<div class="col-md-3">
+							<div class="profile">
+								<div class="row">
+									<div class="profile-pic col-md-3 col-md-offset-1">
+										<img src="images/profile_lenn.png" width="60">
+									</div>
+									<div class="col-md-7 col-md-offset-1">
+										<div class="profile-header-info name">
+											<p>Lenn Hypolite</p>
+										</div>
+										<div class="profile-header-info">
+											<p>27, Welterweight<br>Male 189 Lbs</p>
+										</div>
+									</div>
+								</div>
+								<div class="profile-summary">
+									<p><span class="red">31</span> Fights | <span class="blue">28</span> Wins</p>
+									<p>Most Pewerful Kick: <span class="red">59</span> </p>
+									<p class="purple">89% Righty</p>
+								</div>
+							</div>
+
+							<div class="fights">
+								<div class="fights-header">Fights</div>
+								<div class="fights-body">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="round red-round">
+										<div class="round-head head-red">
+											<div>R1</div>
+										</div>
+										<div class="round-score">
+											 33 - 33
+										</div>
+										<div class="round-body">
+											<div>Date Time</div>
+											<div>Body Sensor Level</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="round red-round">
+										<div class="round-head head-red">
+											<div>R2</div>
+										</div>
+										<div class="round-score">
+											 33 - 33
+										</div>
+										<div class="round-body">
+											<div>Date Time</div>
+											<div>Body Sensor Level</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="round blue-round">
+										<div class="round-head head-blue">
+											<div>R3</div>
+										</div>
+										<div class="round-score">
+											 33 - 33
+										</div>
+										<div class="round-body">
+											<div>Date Time</div>
+											<div>Body Sensor Level</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="active-match-video">
+								<div class="video-player">
+									<div class="video-content">VID</div>
+									<div class="video-tags">Tags</div>
+								</div>
+							</div>
+							<div class="stats">
+								<canvas id="myChart" height="400"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="js/chart.js"></script>
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+	</body>
+</html>
