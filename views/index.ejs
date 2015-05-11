@@ -17,11 +17,11 @@
 				<div class="fbt-body-left col-md-6">
 					<img height="600" src="/images/doggie.jpg">
 				</div>
-				<div class="col-md-6 input-group zip-group">
-					<input type="text" class="form-control zip-search" placeholder="Zipcode">
-					<span class="input-group-btn">
-						<button class="btn btn-default zip-button" type="button"><i class="fa fa-arrow-right"></i></button>
-					</span>
+				<div class="col-md-6 fbt-body-right">
+					<form method="post" action="/lookup/">
+						<input type="text" name="zipcode" id="zipcode">
+						<input type="submit" />
+					</form>
 				</div>
 			</div>
 		</div>

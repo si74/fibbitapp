@@ -1,8 +1,5 @@
 body {
-
 	background: rgb(242,242,242); /* Old browsers */
-
-
 }
 .container-fluid {
 	padding: 0px;
@@ -11,12 +8,11 @@ body {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 .fbt-body-left {
 	background-color: #262626;
 	overflow: hidden;
-	height: 400px;
+	height: 600px;
 	padding: 0px;
 }
 .fbt-body-left img {
@@ -27,8 +23,6 @@ body {
 .fbt-body-right {
 	background-color: #262626;
 	height: 600px;
-	padding-right: 0px;
-	padding-left: 30px;
 }
 .fbt-home-body {
 	background-color: #FFF;
@@ -37,7 +31,8 @@ body {
 	margin-top: 70px;
 	text-align: center;
 	font-size: 2em;
-	padding: 30px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
 }
 .fbt-home-header .fa {
 	font-size: 4em;
@@ -45,14 +40,20 @@ body {
 	text-shadow: 2px 2px 2px rgba(247, 35, 155, 0.5);
 }
 .fbt-navigation {
+	padding-left: 20px;
 	background-color: #FFF;
-	padding: 20px;
 	box-shadow: 2px 2px 2px rgba(247, 35, 155, 0.5);
 	margin-bottom: 20px;
 }
 .nav-left {
+	padding-top: 10px;
+	padding-left: 20px;
 	text-align: left;
 }
+.nav-left .fa {
+	font-size: 3em;
+}
 .nav-right {
+	padding: 20px;
 	text-align: right;
 }

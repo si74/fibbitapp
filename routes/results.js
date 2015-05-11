@@ -2,9 +2,10 @@ var express = require('express'),
 	router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res) {
+router.get('/:zipcode', function(req, res) {
+	var zipcode = req.params.zipcode;
 	res.render(
- 		'results',{title: 'Results'}
+ 		'results',{title: 'Results', zipcode: zipcode}
  	);
 });
 

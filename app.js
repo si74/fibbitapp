@@ -6,6 +6,7 @@ module.exports = function() {
     // Define Routes
     // Front End
     var routes = require('./routes/index');
+    var lookup = require('./routes/lookup');
     var results = require('./routes/results');
 
     //Create the express app
@@ -23,6 +24,7 @@ module.exports = function() {
 
     app.use('/', routes);
     app.use('/results/', results);
+    app.use('/lookup/', lookup);
 
     // catch 404 and forward to error handler
     app.use(function(req, res, next) {
