@@ -1,6 +1,7 @@
 module.exports = function() {
 
 	var express = require('express');
+    var partial = require('express-partial')
 	var path = require('path');
 
     // Define Routes

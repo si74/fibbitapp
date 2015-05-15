@@ -13,6 +13,7 @@
     "body-parser": "^1.12.3",
     "ejs": "1.0",
     "express": "^4.12.3",
+    "express-partial": "^0.1.0",
     "mongodb": "^2.0.25",
     "mongoose": "^4.0.0",
     "multer": "^0.1.8",
