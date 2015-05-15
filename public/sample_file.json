@@ -34,7 +34,7 @@
         "office_visit" : 85
     },
     "care_credit": true,
-    "pet_insurance": true,
+    "pet_insurance": true, 
     "payment_plan": false
   },
   "riverside-veterinary-group-new-york": {

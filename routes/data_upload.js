@@ -9,22 +9,23 @@ router.get('/', function(req, res) {
 	res.render(
  		'index',{title: 'DATA SUCCESSFULLY UPLOADED'}
  	);
- 	fs.readFile('/data/sample_file.json', 'utf8', function(err,data){
 
-		for (var key in data){
-			console.log(key,data[key]);
-		}
+ 	var data = require('../data/sample_file.json');
 
-		if (err) return console.error(err);
+	for (var key in data){
+		// console.log("****************************************",data[key]);
+		var vetDoc = new vetSchema(data[key]);
 
-	})
+		vetDoc.save(function (err, vettyDuck) {
+		 if (err) return console.error(err);
+		});
+	}
+
+
+
 });
 
 
-//var vetDoc = new vetSchema(vetFile);
 
-//vetDoc.save(function (err, matchDoc) {
-//  if (err) return console.error(err);
-//});
 
 module.exports = router;
