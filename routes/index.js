@@ -9,8 +9,6 @@ router.get('/', function(req, res) {
  		'index',{title: 'Dashboard'}
  	);
 
-	results
-
 });
 
 /*router.post('/', function(req,res){
