@@ -8,6 +8,7 @@ module.exports = function() {
     var routes = require('./routes/index');
     var lookup = require('./routes/lookup');
     var results = require('./routes/results');
+    var data_upload = require('./routes/data_upload');
 
     //Create the express app
     var app = express();
@@ -25,6 +26,7 @@ module.exports = function() {
     app.use('/', routes);
     app.use('/results/', results);
     app.use('/lookup/', lookup);
+    app.use('/data_upload',data_upload);
 
     // catch 404 and forward to error handler
     app.use(function(req, res, next) {
