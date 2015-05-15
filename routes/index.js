@@ -5,9 +5,16 @@ var express = require('express'),
 /* GET home page. */
 router.get('/', function(req, res) {
 
-	res.render(
- 		'index',{title: 'Dashboard'}
- 	);
+	//grab data from DB
+	vetSchema.find().lean().exec(function(err,docs){
+		 if (err){
+		  	var data = {title: 'Fibbit NYC'}
+		 }else{
+			var data = {title: 'Fibbit NYC', vets: docs}
+			res.render('index', data);
+		}
+
+	});
 
 });
 
