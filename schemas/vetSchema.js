@@ -38,3 +38,5 @@ var vetSchema = mongoose.Schema({
     pet_insurance : Boolean, 
     payment_plan : Boolean
 });
+
+module.exports = mongoose.model('fibbit_db', vetSchema);

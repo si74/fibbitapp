@@ -65,7 +65,7 @@
     "cat_friendly_practice": false,
     "low_cost": false,
     "house_visit": false,
-    "24_hour": false,
+    "t_24_hour": false,
     "general": true,
     "specialists": false,
     "prices" :{
@@ -98,12 +98,12 @@
     "su": "24 hours"
     },
     "fb_url": "",
-    "twitter_url": "http://www.twitter.com/bluepearlvet",
+    "twitter_url" : "http://www.twitter.com/bluepearlvet",
     "aaha": false,
     "cat_friendly_practice": false,
     "low_cost": false,
     "house_visit": false,
-    "24_hour": false,
+    "t_24_hour": false,
     "general": true,
     "specialists": true,
     "prices" :{
@@ -111,6 +111,6 @@
     },
     "care_credit": true,
     "pet_insurance": true,
-    "payment_plan": false,
+    "payment_plan": false
   }
 }
