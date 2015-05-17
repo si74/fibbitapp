@@ -7,7 +7,7 @@ module.exports = function() {
     // Front End
     var routes = require('./routes/index');
     var lookup = require('./routes/lookup');
-    var results = require('./routes/results');
+    var search = require('./routes/search');
     var data_upload = require('./routes/data_upload');
 
     //Create the express app
@@ -22,6 +22,7 @@ module.exports = function() {
     app.use(express.static(path.join(__dirname, '/public')));
 
     app.use(favicon(path.join(__dirname,'/public','images','favicon.ico')));
+    app.use(favicon(path.join(__dirname,'/public','images','dog_paw_glypish.png')));
 
     app.use('/', routes);
     app.use('/results/', results);
