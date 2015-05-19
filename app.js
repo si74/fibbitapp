@@ -5,7 +5,8 @@ module.exports = function() {
 
     // Define Routes
     // Front End
-    var routes = require('./routes/index');
+    var index = require('./routes/index');
+    var alpha = require('./routes/alpha');
     var lookup = require('./routes/lookup');
     var search = require('./routes/search');
     var data_upload = require('./routes/data_upload');
@@ -22,10 +23,10 @@ module.exports = function() {
     app.use(express.static(path.join(__dirname, '/public')));
 
     app.use(favicon(path.join(__dirname,'/public','images','favicon.ico')));
-    app.use(favicon(path.join(__dirname,'/public','images','dog_paw_glypish.png')));
 
-    app.use('/', routes);
-    app.use('/results/', results);
+    app.use('/',index);
+    app.use('/alpha/', alpha);
+    app.use('/search/', search);
     app.use('/lookup/', lookup);
     app.use('/data_upload',data_upload);
 

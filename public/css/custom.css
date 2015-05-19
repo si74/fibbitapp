@@ -108,7 +108,15 @@ body {
 .nav-right {
 	padding: 20px;
 	text-align: right;
+	font-size: 1.5em;
+	text-decoration:none;
+	color:#fff;
 }
+.nav-right a:link {color: black;}      /* unvisited link */
+.nav-right a:visited {color: black;}   /* visited link */
+.nav-right a:hover {color: black;}     /* mouse over link */
+.nav-right a:active {color: black;} 
+
 .row {
 	margin: 0;
 }

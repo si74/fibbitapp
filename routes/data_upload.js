@@ -7,7 +7,7 @@ var express = require('express'),
 /* GET home page. */
 router.get('/', function(req, res) {
 	res.render(
- 		'index',{title: 'DATA SUCCESSFULLY UPLOADED'}
+ 		'data',{title: 'DATA SUCCESSFULLY UPLOADED'}
  	);
 
  	var data = require('../data/sample_file.json');
