@@ -112,10 +112,16 @@ body {
 	text-decoration:none;
 	color:#fff;
 }
-.nav-right a:link {color: black;}      /* unvisited link */
-.nav-right a:visited {color: black;}   /* visited link */
-.nav-right a:hover {color: black;}     /* mouse over link */
-.nav-right a:active {color: black;} 
+
+.nav-right a{
+	text-decoration:none;
+	color:#fff;
+}
+
+.nav-right a:link {color: #fff;}      /* unvisited link */
+.nav-right a:visited {color: #fff;}   /* visited link */
+.nav-right a:hover {color: #fff;}     /* mouse over link */
+.nav-right a:active {color: #fff;} 
 
 .row {
 	margin: 0;

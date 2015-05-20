@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "^0.9.0",
-    "body-parser": "^1.12.3",
+    "body-parser": "^1.12.4",
     "ejs": "1.0",
     "express": "^4.12.3",
     "express-partial": "^0.1.0",

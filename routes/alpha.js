@@ -8,10 +8,11 @@ router.get('/', function(req, res) {
 	//grab data from DB
 	vetSchema.find().lean().exec(function(err,docs){
 		 if (err){
-		  	var data = {title: 'Fibbit NYC', vets: 'Error!'}
+		  	var data = {title: 'Fibbit NYC', vets: 'Error!'};
+		  	res.status(500);
 		 }else{
-			var data = {title: 'Fibbit NYC', vets: docs}
-			res.render('alpha', data);
+			var data = {title: 'Fibbit NYC', vets: docs};
+			res.status(200).render('alpha', data);
 		}
 
 	});
