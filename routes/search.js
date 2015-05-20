@@ -17,7 +17,7 @@ router.post('/', function(req, res) {
 	}
 
 	//cat-friendly
-	if (req.body.cat){
+	if (req.body.cat_friendly){
 		param['cat_friendly'] = true;
 	}
 
@@ -59,7 +59,6 @@ router.post('/', function(req, res) {
 		  	res.render
 		 }else{
 			var data = {vets: docs}
-			console.log(data);
 			res.status(200).json(data);
 		}
 

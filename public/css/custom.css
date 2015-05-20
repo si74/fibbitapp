@@ -110,18 +110,18 @@ body {
 	text-align: right;
 	font-size: 1.5em;
 	text-decoration:none;
-	color:#fff;
+	color:#000;
 }
 
 .nav-right a{
 	text-decoration:none;
-	color:#fff;
+	color:#000;
 }
 
-.nav-right a:link {color: #fff;}      /* unvisited link */
-.nav-right a:visited {color: #fff;}   /* visited link */
-.nav-right a:hover {color: #fff;}     /* mouse over link */
-.nav-right a:active {color: #fff;} 
+.nav-right a:link {color: #000;}      /* unvisited link */
+.nav-right a:visited {color: #000;}   /* visited link */
+.nav-right a:hover {color: #000;}     /* mouse over link */
+.nav-right a:active {color: #000;} 
 
 .row {
 	margin: 0;

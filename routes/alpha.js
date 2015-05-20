@@ -5,20 +5,9 @@ var express = require('express'),
 /* GET home page. */
 router.get('/', function(req, res) {
 
-	//grab data from DB
-	vetSchema.find().lean().exec(function(err,docs){
-		 if (err){
-		  	var data = {title: 'Fibbit NYC', vets: 'Error!'};
-		  	res.status(500);
-		 }else{
-			var data = {title: 'Fibbit NYC', vets: docs};
-			res.status(200).render('alpha', data);
-		}
-
-	});
+	var data = {title: 'Fibbit NYC'};
+	res.status(200).render('alpha', data);
 
 });
-
-
 
 module.exports = router;

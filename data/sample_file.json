@@ -1319,7 +1319,7 @@
     "cat_friendly": true,
     "low_cost": false,
     "house_visit": false,
-    "t_24_hour": true,
+    "t_24_hour": false,
     "general": true,
     "specialists": false,
     "prices" :{

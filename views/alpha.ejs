@@ -11,121 +11,6 @@
 		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/js/custom.js"></script>
 		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
-		<script>
-			$(document).ready(function(){
-
-				//initialize mapbox.js map
-				$('.fbt-body-center').append("<div id='fbt_map'></div>");
-				L.mapbox.accessToken = 'pk.eyJ1Ijoic2k3NCIsImEiOiJLdGEwMVVjIn0.8AaQpogJEzYTU1nRDushsA';
-				var map = L.mapbox.map('fbt_map', 'si74.la690i93').setView([40.7470, -73.9860],13);
-
-				//grab relevant data object
-				var dataObject = <%- JSON.stringify(vets) %>;
-
-				//drop markers for mapbox.js object
-				for (i=0; i < dataObject.length; i++){
-
-					var myIcon = L.icon({
-							iconUrl: ('images/dog_paw_glypish.png'),
-							className: ('vet'+i)
-						})
-					//add marker to map
-					L.marker([dataObject[i].latitude,dataObject[i].longitude],{
-						clickable:true,
-						title: dataObject[i].name,
-						opacity: 1,
-						icon: myIcon
-					})
-					.addTo(map);
-					//.bindPopup('<button>' + dataObject[i].name +'</button><button id="vet'+i+'">See info!</div>')
-					
-					//function to roll to 
-					$('.vet'+i).on('click',function(){
-						var sname = '.vet'+i;
-						console.log(sname);
-						$('.fbt_vet').filter(sname).toggle('pulsate');
-						//alert('yay!');
-					});
-					
-					//check if web_url exists
-					if (dataObject[i].web_url == ''){ 
-						var web_url = '';
-					}else{
-						var web_url = '<div id="fbt_url"><b>Web: </b><a href="'+dataObject[i].web_url+'">'+dataObject[i].web_url+'<a/></div>';
-					}
-
-					//check if facebook url exists
-					if (dataObject[i].fb_url == ''){ 
-						var fb_url = '';
-					}else{
-						var fb_url = '<div id="fbt_fb_url"><b>Web: </b><a href="'+dataObject[i].fb_url+'">'+dataObject[i].fb_url+'<a/></div>';
-					}
-
-					//check if twitter url exists
-					if (dataObject[i].twitter_url == ''){ 
-						var t_url = '';
-					}else{
-						var t_url = '<div id="fbt_t_url"><b>Web: </b><a href="'+dataObject[i].twitter_url+'">'+dataObject[i].twitter_url+'<a/></div>';
-					}
-
-					//check if price of office visit exists
-					if (dataObject[i].prices.office_visit == -1){
-						var price = ''; 
-					}else{
-						var price = '<div id="fbt_price"><b>Office Visit: </b>'+dataObject[i].prices.office_visit+'<a/></div>';
-					}
-
-					//check if AAHA-certified
-					if (dataObject[i].prices.office_visit == -1){
-						var price = ''; 
-					}else{
-						var price = '<div id="fbt_price"><b>Office Visit: </b>'+dataObject[i].prices.office_visit+'<a/></div>';
-					}
-					
-					//check if Cat-friendly
-					
-					//check if 24 hour vet
-					
-					//check if care credit is accepted
-
-					//check if pet insurance accepted
-					
-					//check if low cost vet
-					
-					//check if home visit vet
-					//<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					
-					//add vet info to right side of page
-					$('.fbt-body-right').append('<div class="fbt_vet vet'+i+'"> \
-													 <h4 id="fbt_vet_name">'+dataObject[i].name+'</h4> \
-													 '+ web_url + ' \
-													 <div id="fbt_yelp"> <b>Yelp:</b> <a href="'+dataObject[i].url+'">'+dataObject[i].url+'</a></div> \
-													 <div id="fbt_phone"><b>'+dataObject[i].display_phone+'</b></div> \
-													 <div id="address">'+dataObject[i].address+'</div> \
-													 '+price+' \
-												</div> ' );
-				}
-
-				$('.fbt-btn').on('click',function(){
-					alert('reset!');
-				})
-
-				$('.filter_check').change(function(){
-					var aaha_check = false, 
-						cat_check = false,
-					    house_check = false,
-						twofour_check = false,
-						low_check = false,
-						cc_check = false,
-						insurance_check = false,
-						payment_check = false;
-					if ($('aaha_check').is(':checked')){ }
-				})
-
-
-			})
-			
-		</script>
 	</head>
 	<body>
 		<div id="map"></div>
@@ -164,7 +49,6 @@
 						<div class="fbt-checkbox checkbox">
 							<label><input type="checkbox" id="payment_check" class="filter_check">Payment plans available</label>
 						</div>
-						<button type="submit" class="btn btn-default fbt-btn">Clear all</button>
 					</div>
 				</div>
 				<div class="fbt-body-center col-md-6">
