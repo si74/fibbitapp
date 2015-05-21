@@ -46,33 +46,80 @@
 							}
 
 							//check if AAHA-certified
-							if (dataObject[i].prices.office_visit == -1){
-								var price = ''; 
+							if (!dataObject[i].aaha){
+								var aaha = ''; 
 							}else{
-								var price = '<div id="fbt_price"><b>Office Visit: </b>'+dataObject[i].prices.office_visit+'<a/></div>';
+								var aaha = '<div id="fbt_aaha"><b>AAHA-certified</b></div>';
 							}
 							
 							//check if Cat-friendly
+							if (!dataObject[i].cat_friendly){
+								var cat_friendly = ''; 
+							}else{
+								var cat_friendly = '<div id="fbt_cat"><b><img src="images/cat.png"/>Cat friendly!</b></div>';
+							}
 							
 							//check if 24 hour vet
+							if (!dataObject[i].t_24_hour){
+								var t_24 = ''; 
+							}else{
+								var t_24 = '<div id="fbt_24"><b><img src="images/time_clock.png"/>Open 24 hours</b></div>';
+							}
 							
 							//check if care credit is accepted
+							if (!dataObject[i].care_credit){
+								var care_credit = ''; 
+							}else{
+								var care_credit = '<div id="fbt_care"><b>Care Credit Accepted</b></div>';
+							}
 
 							//check if pet insurance accepted
+							if (!dataObject[i].pet_insurance){
+								var pet_insurance = ''; 
+							}else{
+								var pet_insurance = '<div id="fbt_insurance"><b>Pet insurance Accepted</b></div>';
+							}
 							
 							//check if low cost vet
+							if (!dataObject[i].low_cost){
+								var low_cost = ''; 
+							}else{
+								var low_cost = '<div id="fbt_low"><b>Low Cost Option</b></div>';
+							}
 							
 							//check if home visit vet
 							//<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+							if (!dataObject[i].house_visit){
+								var house_visit = ''; 
+							}else{
+								var house_visit = '<div id="fbt_home"><b>Makes house calls</b></div>';
+							}
+
+							//add hour info
+							if (dataObject[i].hours.m == ''){
+								var hours = ''; 
+							}else{
+								var hours = '<div id="fbt_home"><b>Hours:</b><br/> \
+											m:   '+dataObject[i].hours.m+'<br/> \
+											t:   '+dataObject[i].hours.t+'<br/> \
+											w:   '+dataObject[i].hours.w+'<br/> \
+											th:  '+dataObject[i].hours.th+'<br/> \
+											f:   '+dataObject[i].hours.f+'<br/> \
+											sat: '+dataObject[i].hours.sat+'<br/> \
+											su:  '+dataObject[i].hours.su+'<br/> \
+											</div>';
+							}
 							
 							//add vet info to right side of page
 							$('.fbt-body-right').append('<div class="fbt_vet" id="vet'+i+'"> \
 															 <h4 id="fbt_vet_name">'+dataObject[i].name+'</h4> \
 															 '+ web_url + ' \
 															 <div id="fbt_yelp"> <b>Yelp:</b> <a href="'+dataObject[i].url+'">'+dataObject[i].url+'</a></div> \
-															 <div id="fbt_phone"><b>'+dataObject[i].display_phone+'</b></div> \
-															 <div id="address">'+dataObject[i].address+'</div> \
+															 <div id="fbt_phone"><img src="images/phone1.png"/><b>'+dataObject[i].display_phone+'</b></div> \
+															 <div id="address"><img src="images/house.png"/>'+dataObject[i].address+'</div> \
+															 '+hours+' \
 															 '+price+' \
+															 '+aaha+cat_friendly+t_24+care_credit+pet_insurance+low_cost+house_visit+' \
 														</div> ' );
 						}
 
