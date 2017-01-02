@@ -10,10 +10,10 @@ router.get('/', function(req, res) {
  		'data',{title: 'DATA SUCCESSFULLY UPLOADED'}
  	);
 
- 	var data = require('../data/sample_file.json');
+ 	var data = require('../data/data.json');
 
 	for (var key in data){
-		// console.log("****************************************",data[key]);
+		console.log("****************************************",data[key]);
 		var vetDoc = new vetSchema(data[key]);
 
 		vetDoc.save(function (err, vettyDuck) {
